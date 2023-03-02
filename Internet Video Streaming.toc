@@ -1,0 +1,8 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}Segnali Audio e Voce}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Introduzione}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Converione A/D}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Campionamento}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Quantizzazione}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}PCM (Pulse Code Modulation)}{5}{}%
