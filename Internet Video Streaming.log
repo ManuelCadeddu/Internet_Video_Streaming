@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.16)  28 FEB 2023 18:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.16)  3 MAR 2023 19:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Admin/Desktop/Manuel/Poli/Internet Video Streaming/Internet Video Streaming.tex"
-(c:/Users/Admin/Desktop/Manuel/Poli/Internet Video Streaming/Internet Video Streaming.tex
+**"c:/Users/Admin/Desktop/Manuel/Poli/Internet Video Streaming/Internet_Video_Streaming/Internet Video Streaming.tex"
+(c:/Users/Admin/Desktop/Manuel/Poli/Internet Video Streaming/Internet_Video_Streaming/Internet Video Streaming.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-02> (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -237,32 +237,91 @@ Package pdftex.def Info: 01_1.png  used on input line 29.
 <01_2.png, id=21, 549.252pt x 300.52275pt>
 File: 01_2.png Graphic file (type png)
 <use 01_2.png>
-Package pdftex.def Info: 01_2.png  used on input line 55.
+Package pdftex.def Info: 01_2.png  used on input line 56.
 (pdftex.def)             Requested size: 182.008pt x 99.58551pt.
 <01_3.png, id=22, 647.41875pt x 313.77225pt>
 File: 01_3.png Graphic file (type png)
 <use 01_3.png>
-Package pdftex.def Info: 01_3.png  used on input line 65.
+Package pdftex.def Info: 01_3.png  used on input line 66.
 (pdftex.def)             Requested size: 205.47906pt x 99.58566pt.
  [4 <./01_2.png> <./01_3.png>]
 <01_5.png, id=28, 361.35pt x 171.64125pt>
 File: 01_5.png Graphic file (type png)
 <use 01_5.png>
-Package pdftex.def Info: 01_5.png  used on input line 73.
+Package pdftex.def Info: 01_5.png  used on input line 74.
 (pdftex.def)             Requested size: 209.6493pt x 99.5834pt.
- [5 <./01_5.png>] (Internet Video Streaming.aux) ) 
+ [5 <./01_5.png>] [6]
+<01_6.png, id=35, 586.5915pt x 160.80075pt>
+File: 01_6.png Graphic file (type png)
+<use 01_6.png>
+Package pdftex.def Info: 01_6.png  used on input line 136.
+(pdftex.def)             Requested size: 207.58356pt x 56.90431pt.
+<01_7.png, id=36, 642.60075pt x 178.86826pt>
+File: 01_7.png Graphic file (type png)
+<use 01_7.png>
+Package pdftex.def Info: 01_7.png  used on input line 142.
+(pdftex.def)             Requested size: 224.8744pt x 62.5939pt.
+<01_8.png, id=37, 726.91576pt x 272.81924pt>
+File: 01_8.png Graphic file (type png)
+<use 01_8.png>
+Package pdftex.def Info: 01_8.png  used on input line 147.
+(pdftex.def)             Requested size: 204.68857pt x 76.8218pt.
+ [7 <./01_6.png> <./01_7.png> <./01_8.png>]
+<01_9.png, id=42, 477.58424pt x 274.626pt>
+File: 01_9.png Graphic file (type png)
+<use 01_9.png>
+Package pdftex.def Info: 01_9.png  used on input line 162.
+(pdftex.def)             Requested size: 173.17633pt x 99.58185pt.
+<01_10.png, id=43, 531.78674pt x 56.6115pt>
+File: 01_10.png Graphic file (type png)
+<use 01_10.png>
+Package pdftex.def Info: 01_10.png  used on input line 175.
+(pdftex.def)             Requested size: 213.81448pt x 22.76166pt.
+<01_11.png, id=44, 691.383pt x 381.22424pt>
+File: 01_11.png Graphic file (type png)
+<use 01_11.png>
+Package pdftex.def Info: 01_11.png  used on input line 179.
+(pdftex.def)             Requested size: 232.20816pt x 128.03812pt.
+ [8 <./01_9.png>]
+<01_12.png, id=48, 646.21425pt x 39.14626pt>
+File: 01_12.png Graphic file (type png)
+<use 01_12.png>
+Package pdftex.def Info: 01_12.png  used on input line 188.
+(pdftex.def)             Requested size: 234.84567pt x 14.22643pt.
+<01_13.png, id=49, 421.575pt x 108.405pt>
+File: 01_13.png Graphic file (type png)
+<use 01_13.png>
+Package pdftex.def Info: 01_13.png  used on input line 192.
+(pdftex.def)             Requested size: 154.90604pt x 39.83298pt.
+ [9 <./01_10.png> <./01_11.png> <./01_12.png> <./01_13.png>]
+<01_14.png, id=53, 252.945pt x 40.35075pt>
+File: 01_14.png Graphic file (type png)
+<use 01_14.png>
+Package pdftex.def Info: 01_14.png  used on input line 201.
+(pdftex.def)             Requested size: 124.855pt x 19.91734pt.
+<01_15.png, id=54, 237.2865pt x 55.407pt>
+File: 01_15.png Graphic file (type png)
+<use 01_15.png>
+Package pdftex.def Info: 01_15.png  used on input line 205.
+(pdftex.def)             Requested size: 121.85088pt x 28.45247pt.
+<01_16.png, id=55, 283.65974pt x 92.7465pt>
+File: 01_16.png Graphic file (type png)
+<use 01_16.png>
+Package pdftex.def Info: 01_16.png  used on input line 209.
+(pdftex.def)             Requested size: 139.23254pt x 45.52402pt.
+ [10 <./01_14.png> <./01_15.png> <./01_16.png>] (Internet Video Streaming.aux) ) 
 Here is how much of TeX's memory you used:
- 5412 strings out of 476374
- 90741 string characters out of 5788854
- 1857340 words of memory out of 5000000
- 25762 multiletter control sequences out of 15000+600000
- 518351 words of font info for 53 fonts, out of 8000000 for 9000
+ 5493 strings out of 476374
+ 91995 string characters out of 5788854
+ 1859340 words of memory out of 5000000
+ 25831 multiletter control sequences out of 15000+600000
+ 518710 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,7n,77p,504b,280s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,7n,77p,816b,280s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "Internet Video Streaming.pdf" (5 pages, 623506 bytes).
+Output written on "Internet Video Streaming.pdf" (10 pages, 1272674 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,4 +5,12 @@
 \contentsline {subsection}{\numberline {1.2}Converione A/D}{4}{}%
 \contentsline {subsubsection}{\numberline {1.2.1}Campionamento}{4}{}%
 \contentsline {subsubsection}{\numberline {1.2.2}Quantizzazione}{4}{}%
-\contentsline {subsubsection}{\numberline {1.2.3}PCM (Pulse Code Modulation)}{5}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}PCM (Pulse Code Modulation)}{6}{}%
+\contentsline {subsection}{\numberline {1.3}Codifica della Voce}{6}{}%
+\contentsline {subsubsection}{\numberline {1.3.1}Voce Telefonica}{6}{}%
+\contentsline {subsubsection}{\numberline {1.3.2}Quantizzatore Uniforme}{7}{}%
+\contentsline {subsubsection}{\numberline {1.3.3}Quantizzatore Non Uniforme}{7}{}%
+\contentsline {subsubsection}{\numberline {1.3.4}Codifica Differenziale}{8}{}%
+\contentsline {paragraph}{Predizione nei DPCM\\}{9}{}%
+\contentsline {paragraph}{DPCM di Ordine N-esimo\\}{9}{}%
+\contentsline {paragraph}{Predizione Lineare}{10}{}%
