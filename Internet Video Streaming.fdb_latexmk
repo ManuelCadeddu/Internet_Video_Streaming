@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1677868095 "c:/Users/Admin/Desktop/Manuel/Poli/Internet Video Streaming/Internet_Video_Streaming/Internet Video Streaming.tex" "Internet Video Streaming.pdf" "Internet Video Streaming" 1677868097 0
+["pdflatex"] 1678017038 "c:/Users/Admin/Desktop/Manuel/Poli/Internet Video Streaming/Internet_Video_Streaming/Internet Video Streaming.tex" "Internet Video Streaming.pdf" "Internet Video Streaming" 1678017040 0
   "01_1.png" 1677601760 312741 2506e5cef7eb847908971c9f02ba268c ""
   "01_10.png" 1677866215 29058 1d4fe3ef4d38049e4eb0a891f2b36af2 ""
   "01_11.png" 1677866393 150876 a18895e7ee037103b4eddf21d7c092fc ""
@@ -8,6 +8,9 @@
   "01_14.png" 1677867881 12155 b43c7be681623bad5e9c2a57bfc3b3bd ""
   "01_15.png" 1677867897 11283 490de044f5f4e8fd37c33a79a7483f9c ""
   "01_16.png" 1677867913 20745 0938a4da5578b70519ba92735095b3ef ""
+  "01_17.png" 1678013510 75328 5687b23dccebf36b72cf83ff26132f32 ""
+  "01_18.png" 1678015321 40430 b20d68b9d95f432091731e5d1b3b5fec ""
+  "01_19.png" 1678016848 22240 b405a32f25e991f105e65821bfcaf84f ""
   "01_2.png" 1677603664 67378 6260758c897fcafa17c622e1d1645f82 ""
   "01_3.png" 1677603859 110842 c2a5502d34c0046d798fc63f634ec1b8 ""
   "01_5.png" 1677606835 30408 870ae11ebdfa33401838eb8377aeb4cd ""
@@ -77,10 +80,10 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1673900822 30429 213676d4c7327a21d91ddaed900e7b81 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656233290 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "Internet Video Streaming.aux" 1677868097 1681 2fae2c19839b619d2c7818f91be900b7 "pdflatex"
-  "Internet Video Streaming.tex" 1677868094 15728 331f09975184eb4791327b4967d5e990 ""
-  "Internet Video Streaming.toc" 1677868097 1032 c26f5deab1fa3b75eb90fd0c4ebbe4b6 "pdflatex"
-  "c:/Users/Admin/Desktop/Manuel/Poli/Internet Video Streaming/Internet_Video_Streaming/Internet Video Streaming.tex" 1677868094 15728 331f09975184eb4791327b4967d5e990 ""
+  "Internet Video Streaming.aux" 1678017040 2116 9d4ecd6eb0f20ce6c87d336e6546ad5f "pdflatex"
+  "Internet Video Streaming.tex" 1678017037 19525 ea5fb185ff76a3a41aa0558484e15b75 ""
+  "Internet Video Streaming.toc" 1678017040 1303 71bfaf0785b9f86bfc3abe6c81042b3f "pdflatex"
+  "c:/Users/Admin/Desktop/Manuel/Poli/Internet Video Streaming/Internet_Video_Streaming/Internet Video Streaming.tex" 1678017037 19525 ea5fb185ff76a3a41aa0558484e15b75 ""
   (generated)
   "Internet Video Streaming.aux"
   "Internet Video Streaming.log"

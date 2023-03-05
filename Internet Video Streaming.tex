@@ -169,43 +169,88 @@
 				Notare che codificatore e decodificatore usano il valore del segnale assegnato dal quantizzatore (accento circonflesso) e non quello del segnale originale.
 
 				\paragraph{Predizione nei DPCM\\}
-					\noindent Da ulteriori studi sui segnali, ci si è accorti che non tutti i valori dei campioni $\hat{x}$[n-1] hanno la stessa "importanza", per questo è stato introdotto un \textbf{coefficiente di predizione \textit{$\alpha$}}.
+					Da ulteriori studi sui segnali, ci si è accorti che non tutti i valori dei campioni $\hat{x}$[n-1] hanno la stessa "importanza", per questo è stato introdotto un \textbf{coefficiente di predizione \textit{$\alpha$}}.
 					\\Le performance del DPCM sono massimizzate quando la varianza dell'errore di predizione è minima:
 					\begin{figure}[ht!]
-						\centering{\includegraphics[width=12cm,height=0.8cm,keepaspectratio]{01_10.png}}
+						\centering{\includegraphics[width=12cm,height=0.6cm,keepaspectratio]{01_10.png}}
 					\end{figure}
-					\\Attraverso alcuni calcoli (non importanti a differenza della formula finale) si ottiene:
+					\\Facendo alcuni calcoli (non importanti) si ottiene (importante):
 					\begin{figure}[ht!]
 						\centering{\includegraphics[width=12cm,height=4.5cm,keepaspectratio]{01_11.png}}
 					\end{figure}
 					\\Ovvero, \underline{per massimizzare le prestazioni, \textit{$\alpha$} deve essere uguale al coefficiente di} \\\underline{correlazione \textit{$\rho$}}.
 					\\Notare che \textit{$\alpha$} è sempre compreso tra 0 e 1 e che questo è un risultato generale che vale per tutti i tipi di segnali.
-					\\Il valore tipico di \textit{$\rho$} per il segnale vocale è 0.9 (il 90\% del campione corrente può essere predetto dal precedente).
+					\\Il valore tipico di \textbf{\textit{$\rho$} per il segnale vocale è 0.9} (il 90\% del campione corrente può essere predetto dal precedente).
 
 				\paragraph{DPCM di Ordine N-esimo\\}
-					Il ragionamento descritto nel paragrafo precedente può essere esteso considerando \textit{N} campioni precedenti all'attuale (\textbf{DPCM di ordine N-esimo}), per migliorare la predizione:
+					Il ragionamento del paragrafo precedente può essere esteso considerando \textit{N} campioni precedenti all'attuale (\textbf{DPCM di ordine N-esimo}) per migliorare la predizione:
 					\begin{figure}[ht!]
 						\centering{\includegraphics[width=12cm,height=0.5cm,keepaspectratio]{01_12.png}}
 					\end{figure}
 					\\Se f() è una combinazione lineare:
 					\begin{figure}[ht!]
-						\centering{\includegraphics[width=12cm,height=1.4cm,keepaspectratio]{01_13.png}}
+						\centering{\includegraphics[width=12cm,height=1.2cm,keepaspectratio]{01_13.png}}
 					\end{figure}
 					\\Notare che i coefficienti sono diversi in base al campione.
 					\\Per scegliere i valori dei coefficienti si usa l'\textbf{algoritmo di Levinson-Durbin}.
 					\\Il valore di \textit{N} tipicamente usato per il segnale vocale in banda telefonica è tra gli 8 e i 12.
 
-				\paragraph{Predizione Lineare}
-					I risultati ottenuti fino ad ora possono essere usati per prevedere il prossimo campione senza doverlo campionare e trasmettere la differenza di un campione rispetto alla sua predizione. Questa tecnica è chiamata "Linear Prediction".
+			\subsubsection{Predizione Lineare}
+				I risultati ottenuti fino ad ora possono essere usati per prevedere il prossimo campione senza doverlo campionare e trasmettere la differenza di un campione rispetto alla sua predizione. Questa tecnica è chiamata "Linear Prediction".
+				\begin{figure}[ht!]
+					\centering{\includegraphics[width=12cm,height=0.5cm,keepaspectratio]{01_14.png}}
+				\end{figure}
+				\\Viene codificato solo l'errore:
+				\begin{figure}[ht!]
+					\centering{\includegraphics[width=12cm,height=0.6cm,keepaspectratio]{01_15.png}}
+				\end{figure}
+				\\La miglior predizione lineare è:
+				\begin{figure}[ht!]
+					\centering{\includegraphics[width=12cm,height=1.1cm,keepaspectratio]{01_16.png}}
+				\end{figure}
+
+			\subsubsection{Approccio Statico/Adattivo}
+				Poiché la correlazione tra campioni può essere diversa a seconda del contesto (es. se uno dice una frase in ambiente ruomoroso e un altro la dice in ambiente silenzioso), ovvero \underline{la media dei segnali non è stazionaria}, risulta utile poter adattare i parametri \\(es. \textit{$\alpha_{k}$}) periodicamente.
+				\\Per implementare questa funzionalità il codificatore lavoro come segue:
+				\begin{figure}[ht!]
+					\centering{\includegraphics[width=12cm,height=3.5cm,keepaspectratio]{01_17.png}}
+				\end{figure}
+				\begin{enumerate}
+					\item stima delle caratteristiche dei segnali: si esegue analisi per conoscere la correlazione tra i campioni;
+					\item scelta dell'algoritmo ottimale (che comunque e fisso a seconda del codificatore) e setting dei suoi parametri;
+					\item codifica dei campioni;
+					\item il ciclo si ripete con i nuovi campioni.
+				\end{enumerate}
+				Notare che la stima delle caratteristiche del segnale deve essere robusta e che l'applicazione di queste tecniche genera overhead.
+				\\Le tecniche che mostriamo in questa sezione sono applicabili a tutti i segnali. Considerando il \textbf{segnale vocale}, questo può essere considerato \textbf{stazionario} (le caratteristiche statistiche non cambiano) \textbf{in un intervallo di 5-20 ms} (durata di un fonema).
+				\\Quando si progettano tecniche PCM adattive bisogna gestire la \textit{frequenza di adattamento} (50-200 volte al secondo) e l'\textit{overhead} generato (rappresentare i parametri del sistema con meno bit possibili). Per la voce telefonica, un buon compromesso è quindi quello di scegliere \textbf{N = 160} (20 ms).
+
+				\paragraph{Energy-Adaptive PCM}
+					Poiché ci sono momenti in cui il sgnale ha volume più o meno alto, si può adattare il range del quantizzatore in base ad esso, riducendo il numero di bit di overhead.
 					\begin{figure}[ht!]
-						\centering{\includegraphics[width=12cm,height=0.7cm,keepaspectratio]{01_14.png}}
+						\centering{\includegraphics[width=12cm,height=2cm,keepaspectratio]{01_18.png}}
 					\end{figure}
-					\\Viene codificato solo l'errore:
-					\begin{figure}[ht!]
-						\centering{\includegraphics[width=12cm,height=1cm,keepaspectratio]{01_15.png}}
-					\end{figure}
-					\\La miglior predizione lineare è:
-					\begin{figure}[ht!]
-						\centering{\includegraphics[width=12cm,height=1.6cm,keepaspectratio]{01_16.png}}
-					\end{figure}
+
+				\paragraph{Algoritmi APCM (Adaptive PCM)}
+					Gli algoritmi APCM possono adottare due approcci:
+					\begin{itemize}
+						\item mandare le informazioni sull'adattamento esplicitamente: \textbf{feed-forward APCM} (adattamento esplicito);
+						\item non inviare le informazioni sui parametri esplicitamente: \textbf{feed-back \\APCM} (implicito). In questo caso codificatore e decodificatore li calcolano autonomamente. I vantaggi di questa tecnica stanno nel fatto che vengono trasmesse meno informazioni e che analizzando i campioni nel passato si ha più precisione, lo svantaggio che non possono essere fatte predizioni (velocità) ma i codificatore deve aspettare un insieme di campioni prima della decodifica.
+					\end{itemize}
+
+				\paragraph{APCM e DPCM}
+					La tecnica DPCM e quella APCM possono essere utilizzate contemporanemente per \underline{predirre coefficienti localmente ottimi}. Questo è l'approccio usaro dal codificatore/decodificatore \textbf{ADPCM} (\textbf{ITU-T G.726 ADPCM}):
+					\begin{itemize}
+						\item \textbf{32 kbit/s} (prima erano 64 kbit/s);
+						\item è aumentata la complessità per calcolare \textit{$\alpha_{k}$}(1 MIPS, Milion Instuctions Per Second): non c'è più solo una tabella di lookup ma servono memoria, processore\dots
+						\newpage
+						\item l'overhead (per la trasmissione degli \textit{$\alpha_{k}$}) è di circa l'8\%;
+						\begin{figure}[ht!]
+							\centering{\includegraphics[width=12cm,height=0.9cm,keepaspectratio]{01_19.png}}
+						\end{figure}
+						\item anche se sono state sviluppate soluzioni migliori (es. per telefonia mobile), questa tecnica è quella usata per la telefonia fissa;
+						\item l'ADPCM è il massimo raggiungibilie utilizzando le tecniche PCM.
+					\end{itemize}
+
+			
 \end{document}
